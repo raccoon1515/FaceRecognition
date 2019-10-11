@@ -1,0 +1,16 @@
+allprojects {
+    group 'ru.nstu'
+    version '1.0-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: "java"
+
+    sourceCompatibility = "1.8"
+    buildDir = new File(rootProject.buildDir, project.name)
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
